@@ -49,6 +49,6 @@ int main(int argc, char** argv) {
     // don't wanna put this in the loop at it will join and wait for the thread to finish executing
     for (int i = 0; i < num_args; i++) {
         pthread_join(tids[i], NULL);
-        printf("Sum of %lld is %lld\n", args[i].limit, args[i].answer);
+        printf("Sum of %lld is %lld. Thread id: %ld\n", args[i].limit, args[i].answer, tids[i]);
     }
 }
