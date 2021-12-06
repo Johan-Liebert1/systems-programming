@@ -3,7 +3,7 @@
 
 typedef long long loong;
 
-#define NUM_LOOPS 5000000
+#define NUM_LOOPS 50000000
 
 loong sum = 0;
 
@@ -31,6 +31,7 @@ int main() {
     int offset1 = 1, offset2 = -1;
 
     pthread_create(&id1, NULL, counting_function, &offset1);
+
     pthread_create(&id2, NULL, counting_function, &offset2);
 
     pthread_join(id1, NULL);
