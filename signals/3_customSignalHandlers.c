@@ -7,7 +7,7 @@
 #define MSG_LEN 19
 
 static void signal_handler(int signal) {
-    if (signal == SIGINT) {
+    if (signal == SIGKILL) {
         write(STDOUT_FILENO, MESSAGE, MSG_LEN);
     }
 }
@@ -18,7 +18,7 @@ int main() {
     signal(SIGINT, signal_handler);
 
     while (1) {
-        printf("Counter is %d\n", ++counter);
+        printf("Counter is %lu\n", ++counter);
         usleep(500000);  // 500ms
     }
 

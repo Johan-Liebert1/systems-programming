@@ -10,7 +10,7 @@ int main() {
     unsigned long int counter = 0;
 
     while (1) {
-        printf("Counter is %d\n", ++counter);
+        printf("Counter is %lu\n", ++counter);
         usleep(500000);  // 500ms
     }
 
