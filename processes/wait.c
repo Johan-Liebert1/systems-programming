@@ -16,6 +16,8 @@ int main() {
         // kill(getpid(), 9);
     }
 
+    // in child fork returns 0
+    // in parent fork returns the pid of child
     char *parent_or_child = fork_return == 0 ? "Child" : "Parent";
 
 
