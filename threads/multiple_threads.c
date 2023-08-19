@@ -1,6 +1,7 @@
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 // either thread can access global data
 struct sum {
@@ -18,6 +19,8 @@ void* sum_runner(void* arg) {
     for (long long i = 0; i <= limit; i++) {
         arg_struct->answer += i;
     }
+
+    sleep(10 - arg_struct->limit);
 
     // send the answer back. Here 0 is the value we're sending back to the main thread
     pthread_exit(0);

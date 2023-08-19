@@ -3,7 +3,7 @@
 
 typedef long long loong;
 
-#define NUM_LOOPS 50000000
+#define NUM_LOOPS 50000
 
 loong sum = 0;
 
